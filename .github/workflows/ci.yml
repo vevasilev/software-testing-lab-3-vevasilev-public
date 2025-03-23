@@ -44,4 +44,4 @@ jobs:
         with:
           folder: build/reports/allure-report
           target_branch: gh-pages
-          token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}

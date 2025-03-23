@@ -18,6 +18,8 @@ jobs:
         with:
           java-version: '23'
           distribution: 'temurin'
+      - name: Permission for Gradle
+        run: chmod +x ./gradlew
       - name: Build and run tests
         run: ./gradlew test
       - name: Upload test results

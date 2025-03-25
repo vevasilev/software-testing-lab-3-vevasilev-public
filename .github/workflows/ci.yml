@@ -57,14 +57,14 @@ jobs:
           path: build/reports/allure-report
 
       - name: Upload SpotBugs report to GitHub Pages
-        uses: actions/upload-artifact@v4
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build/reports/spotbugs
           publish_branch: gh-pages
 
       - name: Upload test results to GitHub Pages
-        uses: actions/upload-artifact@v4
+        uses: peaceiris/actions-gh-pages@v4
         if: always()
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

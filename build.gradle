@@ -64,7 +64,7 @@ spotbugsMain {
     reports {
         html {
             enabled true
-            destination file("${buildDir}/reports/spotbugs/spotbugs.html")
+            destination file("${buildDir}/reports/spotbugs/spotbugs/spotbugs.html")
         }
     }
 }

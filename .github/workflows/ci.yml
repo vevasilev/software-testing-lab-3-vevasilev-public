@@ -40,14 +40,14 @@ jobs:
         if: always()
         with:
           name: test-results
-          path: build/reports/tests/
+          path: build/reports/tests
 
       - name: Upload JaCoCo code coverage report
         uses: actions/upload-artifact@v4
         if: always()
         with:
           name: jacoco-report-html
-          path: build/reports/jacoco/test/html
+          path: build/reports/jacoco/test
 
       - name: Upload Allure report
         uses: actions/upload-artifact@v4
@@ -56,6 +56,31 @@ jobs:
           name: allure-report
           path: build/reports/allure-report
 
+      - name: Upload SpotBugs report to GitHub Pages
+        uses: actions/upload-artifact@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build/reports/spotbugs
+          publish_branch: gh-pages
+
+      - name: Upload test results to GitHub Pages
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build/reports/tests
+          publish_branch: gh-pages
+          keep_files: true
+
+      - name: Upload JaCoCo report to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        if: always()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build/reports/jacoco/test
+          publish_branch: gh-pages
+          keep_files: true
+
       - name: Upload Allure report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         if: always()
@@ -63,3 +88,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build/reports/allure-report
           publish_branch: gh-pages
+          keep_files: true

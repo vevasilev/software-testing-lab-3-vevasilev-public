@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - UserAnalyticsIntegrationTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>UserAnalyticsIntegrationTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/org.itmo.testing.lab2.integration.html">org.itmo.testing.lab2.integration</a> &gt; UserAnalyticsIntegrationTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">20</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">2</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">3.660s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox skipped" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="skipped">Тест поиска неактивных пользователей с некорректным параметром</td>
+<td class="skipped">findInactiveUsers_invalidDays_shouldReturnError()</td>
+<td class="skipped">-</td>
+<td class="skipped">ignored</td>
+</tr>
+<tr>
+<td class="success">Тест поиска неактивных пользователей с некорректным форматом параметров</td>
+<td class="success">findInactiveUsers_invalidFormatDaysParam_shouldReturnError()</td>
+<td class="success">0.013s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Тест поиска неактивных пользователей с отсутствующим параметром</td>
+<td class="success">findInactiveUsers_missingDaysParam_shouldReturnError()</td>
+<td class="success">0.024s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Тест поиска неактивных пользователей</td>
+<td class="success">findInactiveUsers_validDays_shouldReturnInactiveUsers()</td>
+<td class="success">0.572s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Тест получения месячной активности с некорректным форматом параметра</td>
+<td class="success">getMonthlyActivity_invalidFormatParam_shouldReturnError()</td>
+<td class="success">0.013s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Тест получения месячной активности с отсутствующими параметрами</td>
+<td class="success">getMonthlyActivity_missingParams_shouldReturnError()</td>
+<td class="success">0.021s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Тест получения месячной активности для несуществующего пользователя</td>
+<td class="success">getMonthlyActivity_nonExistingUser_shouldReturnError()</td>
+<td class="success">0.014s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Тест получения месячной активности</td>
+<td class="success">getMonthlyActivity_validUserAndMonth_shouldReturnMonthlyActivity()</td>
+<td class="success">1.034s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Тест получения активности без userId</td>
+<td class="success">getTotalActivity_missingUserId_shouldReturnError()</td>
+<td class="success">0.012s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Тест получения активности для несуществующего пользователя</td>
+<td class="success">getTotalActivity_nonExistingUser_shouldReturnError()</td>
+<td class="success">0.011s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Тест получения активности для пользователя без сессий</td>
+<td class="success">getTotalActivity_userHasNoSessions_shouldReturnError()</td>
+<td class="success">0.027s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Тест получения общего времени активности</td>
+<td class="success">getTotalActivity_validUser_shouldReturnTotalActivity()</td>
+<td class="success">0.033s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="skipped">Тест записи сессии с датой начала после даты окончания</td>
+<td class="skipped">recordSession_invalidDates_shouldReturnError()</td>
+<td class="skipped">-</td>
+<td class="skipped">ignored</td>
+</tr>
+<tr>
+<td class="success">Тест записи сессии с датами некорректного формата</td>
+<td class="success">recordSession_invalidFormatDates_shouldReturnError()</td>
+<td class="success">0.018s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Тест записи сессии с отсутствующими параметрами</td>
+<td class="success">recordSession_missingParams_shouldReturnError()</td>
+<td class="success">0.016s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Тест записи сессии для несуществующего пользователя</td>
+<td class="success">recordSession_nonExistingUser_shouldReturnError()</td>
+<td class="success">0.017s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Тест записи сессии с корректными датами</td>
+<td class="success">recordSession_validDates_shouldRecordSession()</td>
+<td class="success">0.019s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Тест повторной регистрации пользователя</td>
+<td class="success">userRegistration_existingUser_shouldReturnError()</td>
+<td class="success">0.025s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Тест регистрации пользователя с отсутствующими параметрами</td>
+<td class="success">userRegistration_missingParams_shouldReturnError()</td>
+<td class="success">0.018s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Тест регистрации пользователя</td>
+<td class="success">userRegistration_validUser_shouldRegisterSuccessfully()</td>
+<td class="success">1.771s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>[Test worker] INFO io.javalin.Javalin - Starting Javalin ...
+[Test worker] INFO org.eclipse.jetty.server.Server - jetty-11.0.24; built: 2024-08-26T18:11:22.448Z; git: 5dfc59a691b748796f922208956bd1f2794bcd16; jvm 23.0.2+7
+[Test worker] INFO org.eclipse.jetty.server.session.DefaultSessionIdManager - Session workerName=node0
+[Test worker] INFO org.eclipse.jetty.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@45cce4c2{/,null,AVAILABLE}
+[Test worker] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@75f9a35a{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+[Test worker] INFO org.eclipse.jetty.server.Server - Started Server@1ec96512{STARTING}[11.0.24,sto=0] @3892ms
+[Test worker] INFO io.javalin.Javalin - 
+       __                  ___           _____
+      / /___ __   ______ _/ (_)___      / ___/
+ __  / / __ `/ | / / __ `/ / / __ \    / __ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /   / /_/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/    \____/
+
+       https://javalin.io/documentation
+
+[Test worker] INFO io.javalin.Javalin - Javalin started in 434ms \o/
+[Test worker] INFO io.javalin.Javalin - Listening on http://localhost:7000/
+[Test worker] INFO io.javalin.Javalin - You are running Javalin 6.4.0 (released December 17, 2024).
+[Test worker] INFO io.javalin.Javalin - Stopping Javalin ...
+[Test worker] INFO org.eclipse.jetty.server.Server - Stopped Server@1ec96512{STOPPING}[11.0.24,sto=0]
+[Test worker] INFO org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@75f9a35a{HTTP/1.1, (http/1.1)}{0.0.0.0:7000}
+[Test worker] INFO org.eclipse.jetty.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@45cce4c2{/,null,STOPPED}
+[Test worker] INFO io.javalin.Javalin - Javalin has stopped
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.10</a> at Mar 25, 2025, 11:54:44 AM</p>
+</div>
+</div>
+</body>
+</html>

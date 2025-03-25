@@ -33,7 +33,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: spotbugs-report
-          path: build/reports/spotbugs/spotbugs.html
+          path: build/reports/spotbugs
 
       - name: Upload test results
         uses: actions/upload-artifact@v4
